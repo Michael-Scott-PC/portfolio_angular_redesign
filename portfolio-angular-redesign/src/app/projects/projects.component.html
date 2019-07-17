@@ -1,0 +1,13 @@
+<div id="projects-html-container">
+  <h3 class="projects-header">Projects</h3>
+  <p class="thumb-detail">(tap thumbnail for details)</p>
+  <mat-list>
+    <mat-list-item *ngFor="let project of projects" [routerLink]="['/projectdetail', project.id]">
+      <img matListAvatar class="proj-thumb" src={{project.image}}>
+    </mat-list-item>
+  </mat-list>
+  <video matListAvatar width="90%" height="90%" playsinline controls muted loop>
+    <source src="/assets/video/encoded_version.mp4" type="video/mp4">
+  </video>
+
+</div>

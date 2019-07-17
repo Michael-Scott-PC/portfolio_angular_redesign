@@ -1,0 +1,55 @@
+
+
+
+<!--<form *ngIf="!submitted" novalidate #contactForm="ngForm" (ngSubmit)="onSubmit()">
+  <h3>Send Email</h3>
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Name" type="text" [(ngModel)]="user.name" name="name" #name="ngModel" required>
+      <mat-error *ngIf="name.errors?.required">Please provide your name.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Email" type="email" [(ngModel)]="user.email" name="email" #email="ngModel" required>
+      <mat-error *ngIf="email.errors?.required">Please provide a valid email.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Subject" type="text" [(ngModel)]="user.subject" name="subject" #subject="ngModel" required>
+      <mat-error *ngIf="subject.errors?.required">Please give your email a subject.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Message" type="text" [(ngModel)]="user.message" name="message" #message="ngModel" required></textarea>
+      <mat-error *ngIf="message.errors?.required">The email may not be empty.</mat-error>
+    </mat-form-field>
+    <button mat-button type="submit" class="btn btn-primary" [disabled]="contactForm.form.invalid">Send</button>
+  </p>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+  $('form').on('submit', (e) => {
+    e.preventDefault();
+
+
+    const email = $("input[name='email']").val().trim();
+    const subject = $("input[name='subject']").val().trim();
+    const message = $("input[name='message']").val().trim();
+
+    const data = {
+      email,
+      subject,
+      message
+    };
+
+    $.post('/email', data, function() {
+      console.log('Server received our data');
+    });
+  })
+
+
+</script>
+</form>
+
+<div *ngIf="submitted" class="thankYou">
+  <p>Thank you for reaching out to me! I will get back as soon as possible.</p>
+</div>
+-->
+

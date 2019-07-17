@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+h1 {
+    display: none;
+}
+body {
+    background: #FFF;
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+    /*grid-area:
+    "header"
+    "body"
+    "footer";*/
+}
+
+#container {
+    background: url(assets/images/darkest_layer.png) no-repeat top, url(assets/images/middle_layer.png) no-repeat 50% 15%, url(assets/images/lightest_layer.png) no-repeat 50% 10%; 
+    background-size: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% auto auto;
+    height: 100%;
+    //border: solid 1px black;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: auto;
+    width: 85%;
+    margin: auto;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    list-style-type: none;
+    height: 6vh;
+    margin-top: auto;
+}
+
+li {
+    justify-self: center;
+    margin-top: auto;
+}
+a {
+    font-size: .75em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+}
+
+#content {
+    height: 100%;
+}
+
+/*footer {
+    position: relative;
+    bottom: 0;
+}*/
+
+// For phone landscape view iphone 5s
+@media screen and (orientation:landscape) {
+    #container {
+        //height: unset !important;
+        background: url(assets/images/landscape_darkest.png) no-repeat top, url(assets/images/landscape_middle.png) no-repeat 50% 15%, url(assets/images/landscape_lightest.png) no-repeat 50% 10%;
+        //background-size: cover;
+        background-size: contain;
+        height: 100%;
+    }
+}
+
+// iphone X
+@media screen and (min-width: 800px) and (orientation: landscape) {
+    #container {
+        //height: unset !important;
+        background: url(assets/images/landscape_darkest.png) no-repeat top, url(assets/images/landscape_middle.png) no-repeat 50% 15%, url(assets/images/landscape_lightest.png) no-repeat 50% 10%;
+        background-size: contain;
+        //background-size: inherit;
+        height: 100%;
+    }
+}
+
+// For desktop view
+@media only screen and (min-width: 750px) {
+    nav{
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+    h1 {
+        margin: auto;
+        margin-left: 5%;
+        font-size: 1em;
+        display: grid;
+        grid-template-columns: auto;
+        //border: solid 1px blue;
+        color: #FFF;
+    }
+
+    a:hover {
+        color: #8EF6E1;
+    }
+    a:active {
+        color: rgb(2, 49, 40);
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    #containter {
+        background: url(assets/images/darkest_1500w.png) no-repeat top, url(assets/images/middle_1500w.png) no-repeat 50% 15%, url(assets/images/lightest_1500w.png) no-repeat 50% 10%;
+        background-size: contain;
+    }
+}

@@ -1,0 +1,60 @@
+#projectdetail-html-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-right: 3%;
+    margin-left: 3%;
+    border: .4px rbga(181, 181, 181, .3) solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px gray;
+    padding-right: 3%;
+    background-color: #2dba9a;
+}
+
+h4 {
+    color: #fff;
+    font-variant: small-caps;
+    font-size: 1em;
+}
+
+p.description {
+    color: #fff;
+    font-weight: bold;
+    font-size: .75em;
+    margin-left: -12px;
+    background: linear-gradient(360deg, #2dba9a, transparent);
+}
+.mat-card {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 75% 15%;
+    justify-items: center;
+    //border: 1px black solid;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+.mat-card-image {
+    width: calc(90% + 32px);
+    margin-right: auto;
+}
+
+button {
+    background-color: #0bd0a8;
+    color: #fff; 
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.mat-card-actions .mat-button:first-child {
+    margin-right: 10px;
+}
+
+.mat-card>:first-child {
+    margin-left: -15px;
+}
+
+#projectdetail-html-container[_ngcontent-c3] {
+    height: 90vh;
+}

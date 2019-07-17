@@ -1,0 +1,86 @@
+#container-home {
+    //border: 1px black solid;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 17% 50%;
+}
+
+h2 {
+    color: #FFF;
+    //border: 1px red solid;
+    margin-top: auto;
+    //margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img#headshot {
+    height: auto;
+    width: auto;
+    max-width: 7em;
+    max-height: 7em;
+    justify-self: center;
+    //border: 1px yellow solid;
+    margin-top: 5%;
+}
+
+div#about-me-container {
+    border: .4px rbga(181, 181, 181, .3) solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px gray;
+    //box-shadow: inset 0 0 10px #5EEBCF;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 80%;
+}
+h3 {
+    color: #2DBA9A;
+    font-size: 1.25em;
+    //border: 1px green solid;
+    align-self: center;
+    justify-self: center;
+    margin-top: 15%;
+}
+
+/*h3:after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    left: 35%;
+    border-bottom: 1px solid #2dba9a;
+    margin-top: 25px;
+}*/
+
+p#about-me {
+    font-size: .75em;
+    //border: 1px red solid;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+// For phone landscape view
+@media screen and (orientation:landscape) {
+    #container {
+        height: unset !important;
+    }
+    #container-home {
+        height: unset !important;
+        grid-template-rows: 20% 30% 50%;
+    }
+}
+
+@media screen and (min-width: 350px) {
+    img#headshot {
+        height: auto;
+        width: auto;
+        max-width: 8.5em;
+        max-height: 8.5em;
+    }
+}
