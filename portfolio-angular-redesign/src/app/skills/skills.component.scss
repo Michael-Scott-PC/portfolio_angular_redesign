@@ -124,8 +124,21 @@ h3 {
         height: unset !important;
     }
     #skills-list-container {
-        height: 100vh;
+        height: 80vh;
         margin-top: 10%;
+        width: 80%;
+    }
+    #first-ul {
+        justify-content: space-evenly;
+    }
+    #second-ul {
+        justify-content: space-evenly;
+    }
+    /*h4 {
+        color: #014A01;
+    }*/
+    .languages-header {
+        color: #014A01;
     }
 }
 
@@ -134,5 +147,10 @@ h3 {
         width: 4%;
         left: 48%;
     }
+    .second-header {
+        color: #014A01;
+    }
+    .second-header-2 {
+        color: #014A01;
+    }
 }
-

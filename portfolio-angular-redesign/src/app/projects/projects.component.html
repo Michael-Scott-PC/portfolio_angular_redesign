@@ -3,10 +3,10 @@
   <p class="thumb-detail">(tap thumbnail for details)</p>
   <mat-list>
     <mat-list-item *ngFor="let project of projects" [routerLink]="['/projectdetail', project.id]">
-      <img matListAvatar class="proj-thumb" src={{project.image}}>
+      <img matListAvatar class="proj-thumb" src={{project.image}} alt="Thumbnail pictures of code snippets for my order tracker project">
     </mat-list-item>
   </mat-list>
-  <video matListAvatar width="90%" height="90%" playsinline controls muted loop>
+  <video matListAvatar title="My order tracker in action retrieving order status information" width="90%" height="90%" playsinline controls muted loop>
     <source src="/assets/video/encoded_version.mp4" type="video/mp4">
   </video>
 
