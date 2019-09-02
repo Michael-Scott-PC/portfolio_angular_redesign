@@ -2,7 +2,7 @@
     <mat-card *ngIf="proj">
       <mat-card-header>
         <mat-card-title>
-          <h4>{{proj.label}}</h4>
+          <h4 class="proj-label">{{proj.label}}</h4>
         </mat-card-title>
       </mat-card-header>
       <mat-card-content>
@@ -12,5 +12,5 @@
         <button mat-button (click)="goBack()">BACK</button>
       </mat-card-actions>
     </mat-card>
-    <img mat-card-image src={{proj.image}} alt={{proj.description}}>
+    <img class="contain" src={{proj.image}} alt={{proj.description}}>
 </div>

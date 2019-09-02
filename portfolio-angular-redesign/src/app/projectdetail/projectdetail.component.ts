@@ -1,10 +1,11 @@
 import { Component, OnInit} from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, RouterLink } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { Proj } from '../shared/proj';
 import { ProjectsService } from '../projects.service';
 import { Observable } from 'rxjs';
+import { PROJECTS } from '../shared/projects';
 
 @Component({
   selector: 'app-projectdetail',
@@ -14,6 +15,7 @@ import { Observable } from 'rxjs';
 export class ProjectdetailComponent implements OnInit {
 
   proj: Proj;
+  projects: Proj[] = PROJECTS;
 
   constructor(private _projectsService: ProjectsService,
     private route: ActivatedRoute,

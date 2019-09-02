@@ -1,90 +1,79 @@
-#projects-html-container {
-    border: .4px rbga(181, 181, 181, .3) solid;
-    border-radius: 5px;
-    box-shadow: 0 0 10px gray;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 15%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 20% 10% 25% 45%;
+.row {
+  justify-content: center;
 }
+
+.container {
+  max-width: 100%;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.inner-container {
+  border: .4px rgba(181, 181, 181, 0.3) solid;
+  border-radius: 5px;
+  background-color: rgba(0, 157, 126, 0.75);
+  box-shadow: 0 0 10px gray;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.image-resize {
+  height: 280px;
+  width: 280px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 
 .projects-header {
-    color: #fff;
-    margin: auto;
-    margin-bottom: 2%;
+  color: #fff;
 }
 
-.thumb-detail {
-    color: #fff;
-    font-size: .75em;
-    justify-self: center;
+.thumb-detail{
+  color: #fff;
+  font-size: 1.25em;
 }
 
-h3:after {
-    content: "";
-    position: absolute;
-    width: 12%;
-    height: 1px;
-    left: 44.5%;
-    border-bottom: 1px solid #fff;
-    margin-top: 30px;
+.project-lift-history-header {
+  color: #fff;
+  margin-bottom: 2%;
 }
 
-mat-list {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-self: center;
-    align-self: center;
-    margin-bottom: 4%;
-    height: 100%;
+.project-hp-header {
+  color: #fff;
+  margin-bottom: 2%;
+  margin-top: 3%;
 }
 
-.mat-list .mat-list-item .mat-list-avatar {
-    width: 100%;
-    height: 100%;
+.video-description {
+  color: #fff;
+  font-size: 1.25em;
+  margin-right: 15%;
+  margin-left: 15%;
 }
 
-video {
-    margin: auto;
+@media screen and (min-width: 740px) and (orientation: landscape) {
+  .image-resize {
+    height: 200px;
+    width: 150px;
+    object-fit: cover;
+    object-position: center center;
+  }
 }
 
-h3 {
-    font-size: 1.35em;
-}
+// For desktop view
+@media only screen and (min-width: 751px) {
+  .image-resize {
+    height: 280px;
+    width: 220px;
+  }
 
-@media screen and (orientation:landscape) {
-    #projects-html-container {
-        margin-top: 5%;
-        grid-template-rows: 7% 10% 25% 45%;
-        height: 150vh;
-    }
-    .projects-header {
-        margin: auto;
-        margin-bottom: auto;
-        margin-top: 0;
-    }
-    h3:after {
-        left: 44%;
-        margin-top: 35px;
-    }
-    .mat-list .mat-list-item.mat-list-item-with-avatar {
-        height: 80px;
-    }
-}
-
-@media screen and (min-width: 750px) {
-    .projects-header {
-        font-size: 1.75em;
-    }
-    h3:after {
-        width: 4%;
-        left: 48%;
-    }
-    .mat-list[_ngcontent-c3] .mat-list-item[_ngcontent-c3] .mat-list-avatar[_ngcontent-c3] {
-        width: 10em;
-        height: 10em;
-    }
 }

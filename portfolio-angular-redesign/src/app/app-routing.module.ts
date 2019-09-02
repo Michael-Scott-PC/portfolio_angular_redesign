@@ -27,10 +27,6 @@ const routes: Routes = [
     path: 'projectdetail/:id',
     component: ProjectdetailComponent
   },
-  {
-    path: 'contact',
-    component: ContactComponent
-  }
 ];
 
 @NgModule({

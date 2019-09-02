@@ -1,13 +1,19 @@
-<div id="projects-html-container">
-  <h3 class="projects-header">Projects</h3>
+<div class="container ml-0 mr-0">
+  <h2 class="projects-header"><strong>Projects</strong></h2>
   <p class="thumb-detail">(tap thumbnail for details)</p>
-  <mat-list>
-    <mat-list-item *ngFor="let project of projects" [routerLink]="['/projectdetail', project.id]">
-      <img matListAvatar class="proj-thumb" src={{project.image}} alt="Thumbnail pictures of code snippets for my order tracker project">
-    </mat-list-item>
-  </mat-list>
-  <video matListAvatar title="My order tracker in action retrieving order status information" width="90%" height="90%" playsinline controls muted loop>
-    <source src="/assets/video/encoded_version.mp4" type="video/mp4">
-  </video>
-
+  <div class="inner-container">
+    <h3 class="project-lift-history-header"><strong>Lift History</strong></h3>
+    <div class="row images">
+      <div class="col-lg-3 mb-4" *ngFor="let project of projects" [routerLink]="['/projectdetail', project.id]">
+        <img class="img-responsive image-resize hover-shadow" src={{project.image}} alt="">
+      </div>
+    </div>
+    <h3 class="project-hp-header"><strong>HP Order Status</strong></h3>
+    <div class="row">
+      <p class="video-description">The HP order status checker was a project I created for my job. Using selenium and webdriver I was able to create an executable that was able to quickly retrieve the necessary details needed in order to keep customers up-to-date on their order.</p>
+      <video matListAvatar title="My order tracker in action retrieving order status information" width="50%" height="50%" playsinline controls muted loop>
+        <source src="/assets/video/encoded_version.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
 </div>

@@ -12,20 +12,15 @@ body {
     background: #FFF;
     font-family: 'Quicksand', sans-serif;
     height: 100vh;
-    /*grid-area:
-    "header"
-    "body"
-    "footer";*/
 }
 
 #container {
-    background: url(assets/images/darkest_layer.png) no-repeat top, url(assets/images/middle_layer.png) no-repeat 50% 15%, url(assets/images/lightest_layer.png) no-repeat 50% 10%; 
+    background: url(assets/images/darkest_layer.png) no-repeat top, url(assets/images/middle_layer.png) no-repeat 50% 15%, url(assets/images/lightest_layer.png) no-repeat 50% 10%;
     background-size: 100%;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 10% auto auto;
     height: 100%;
-    //border: solid 1px black;
 }
 
 nav{
@@ -58,17 +53,10 @@ a {
     height: 100%;
 }
 
-/*footer {
-    position: relative;
-    bottom: 0;
-}*/
-
 // For phone landscape view iphone 5s
 @media screen and (orientation:landscape) {
     #container {
-        //height: unset !important;
         background: url(assets/images/landscape_darkest.png) no-repeat top, url(assets/images/landscape_middle.png) no-repeat 50% 15%, url(assets/images/landscape_lightest.png) no-repeat 50% 10%;
-        //background-size: cover;
         background-size: contain;
         height: 100%;
     }
@@ -77,10 +65,8 @@ a {
 // iphone X
 @media screen and (min-width: 800px) and (orientation: landscape) {
     #container {
-        //height: unset !important;
         background: url(assets/images/landscape_darkest.png) no-repeat top, url(assets/images/landscape_middle.png) no-repeat 50% 15%, url(assets/images/landscape_lightest.png) no-repeat 50% 10%;
         background-size: contain;
-        //background-size: inherit;
         height: 100%;
     }
 }
@@ -97,7 +83,6 @@ a {
         font-size: 1em;
         display: grid;
         grid-template-columns: auto;
-        //border: solid 1px blue;
         color: #FFF;
     }
 
