@@ -1,11 +1,29 @@
 #container-home {
-    height: 100vh;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 20% 17% 50%;
+    height: 100%;
+    margin-top: 5%;
 }
 
-h2 {
+div.welcome-container {
+  text-align: center;
+  margin-top: 5%;
+}
+
+h5.welcome {
+  color: #FFF;
+  font-family: 'Merriweather', serif;
+  margin-bottom: -5%;
+}
+
+h2.portfolio {
+  color: #fff;
+  font-family: 'Six Caps', sans-serif;
+  font-size: 6em;
+  letter-spacing: .1em;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, .5);
+}
+
+h2.my-name {
     color: #FFF;
     margin-top: auto;
     margin-right: auto;
@@ -18,7 +36,7 @@ img#headshot {
     max-width: 7em;
     max-height: 7em;
     justify-self: center;
-    margin-top: 5%;
+    margin-bottom: 1%;
 }
 
 div#about-me-container {
@@ -27,43 +45,286 @@ div#about-me-container {
     box-shadow: 0 0 10px gray;
     margin-left: 3%;
     margin-right: 3%;
+    margin-top: 6%;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 20% 80%;
 }
 h3 {
-    color: #2DBA9A;
+    color: #35C8FF;
     font-size: 1.25em;
     align-self: center;
     justify-self: center;
-    margin-top: 15%;
 }
 
 p#about-me {
-    font-size: .75em;
-    margin-top: auto;
-    margin-bottom: auto;
+    font-size: 1.2em;
     padding-left: 5%;
     padding-right: 5%;
+    text-align: center;
 }
 
+/***********************
+    MEDIA QUERIES
+***********************/
 
-// For phone landscape view
-@media screen and (orientation:landscape) {
-    #container {
-        height: unset !important;
-    }
-    #container-home {
-        height: unset !important;
-        grid-template-rows: 20% 30% 50%;
+/* Galaxy S5 portrait */
+@media screen and (min-width: 360px) {
+  #container-home {
+    margin-top: 10%;
+  }
+  div#about-me-container {
+    margin-top: 10%;
+  }
+}
+
+/* iPhone 6/7/8 & iPhone X portrait */
+@media screen and (min-width: 375px) {
+  div#about-me-container {
+    margin-top: 6%;
+  }
+}
+
+/* Pixel 2 portrait */
+@media screen and (min-width: 411px) {
+  #container-home {
+    margin-top: 14%;
+  }
+  div#about-me-container {
+    margin-top: 10%;
+  }
+}
+
+/* iPad Portrait */
+@media only screen and (min-width: 768px) and (orientation:portrait) {
+  div.welcome-container {
+    margin-top: 15%;
+  }
+  h5.welcome {
+    margin-bottom: -3%;
+    font-size: 1.75rem;
+  }
+  h2.portfolio {
+    font-size: 8em;
+  }
+  #container-home {
+    margin-top: 6%;
+  }
+  div#about-me-container {
+    margin-top: 21%;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  p#about-me {
+    font-size: 1.5em;
+    margin-bottom: 5%;
+  }
+  img#headshot {
+    max-width: unset;
+    max-height: unset;
+  }
+}
+
+/* iPad Pro portrait */
+@media only screen and (min-width: 1024px) {
+  div.welcome-container {
+    margin-top: 10%;
+  }
+  h5.welcome {
+    font-size: 3em;
+  }
+  h2.portfolio {
+    font-size: 13em;
+  }
+  div#about-me-container {
+    margin-top: 18%;
+  }
+  h2.my-name {
+    font-size: 3em;
+  }
+  img#headshot {
+    width: 20em;
+  }
+  h3 {
+    font-size: 3em;
+  }
+  p#about-me {
+    font-size: 2em;
+  }
+  #container-home {
+    margin-top: 6%;
+  }
+}
+
+/* iPhone 5/SE Landscape */
+@media screen and (min-width: 568px) and (orientation:landscape) {
+  div.welcome-container {
+    margin-top: 15%;
+  }
+  div#about-me-container {
+    margin-top: 25%;
+  }
+  h2.my-name {
+    color: #356CFF;
+  }
+}
+
+/* GalaxyS5 landscape */
+@media screen and (min-width: 640px) and (orientation:landscape) {
+  div.welcome-container {
+    margin-top: 10%;
+  }
+  h5.welcome {
+    margin-bottom: -4%;
+  }
+  div#about-me-container {
+    margin-top: 0;
+  }
+  #container-home {
+    margin-top: 0%;
+  }
+}
+
+/* iPhone 6/7/8 landscape */
+@media screen and (min-width: 667px) and (orientation:landscape) {
+  h5.welcome {
+    margin-bottom: -4%;
+  }
+}
+
+/* Pixel 2 landscape */
+@media screen and (min-width: 731px) and (orientation:landscape) {
+  #container-home[_ngcontent-c3] {
+    margin-top: 5%;
+  }
+  div.welcome-container {
+    margin-top: 0;
+  }
+  div#about-me-container {
+    margin-top: 10%;
+  }
+  h2.my-name {
+    color: #35C8FF;
+  }
+}
+
+/* iphone 6/7/8 plus landscape */
+@media screen and (min-width: 736px) and (orientation:landscape) {
+  div#about-me-container {
+    margin-top: 8%;
+  }
+  h2.my-name {
+    color: #35C8FF;
+  }
+}
+
+/* iPhoneX landscape */
+@media screen and (min-width: 812px) and (orientation: landscape) {
+  #container-home {
+    margin-top: 12%;
+  }
+  h5.welcome {
+    margin-bottom: -3%;
+  }
+  h2.portfolio {
+    font-size: 5em;
+  }
+  div#about-me-container[_ngcontent-c3] {
+    margin-top: 5%;
+  }
+  img#headshot {
+    margin-bottom: 1%;
+  }
+  h2.my-name {
+    color: #FFFFFF;
+  }
+}
+
+/* iPad Landscape */
+@media only screen and (min-width: 1024px) and (orientation:landscape) {
+  h5.welcome {
+    font-size: 2em;
+  }
+  h2.portfolio {
+    font-size: 10em;
+  }
+  h2.my-name {
+    color: #356CFF;
+  }
+  img#headshot {
+    max-width: unset;
+    max-height: unset;
+  }
+  h3 {
+    font-size: 2.5em;
+  }
+  p#about-me {
+    font-size: 1.8em;
+    margin-bottom: 5%;
+  }
+  #container-home {
+    margin-top: 8%;
+  }
+  div.welcome-container {
+    margin-top: 0;
+  }
+}
+
+/* iPad Pro Landscape */
+@media only screen and (min-width: 1366px) and (orientation:landscape) {
+  #container-home {
+    margin-top: 0;
+  }
+  h5.welcome {
+    margin-bottom: -2%;
+  }
+  h2.portfolio {
+    font-size: 11em;
+  }
+  h2.my-name {
+    font-size: 3em;
+  }
+  img#headshot {
+    width: 18em;
+  }
+  h3 {
+    font-size: 2.5em;
+  }
+  p#about-me {
+    font-size: 2em;
+  }
+  div#about-me-container{
+    margin-top: 4%;
+  }
+  div.welcome-container {
+    margin-top: 2%;
+  }
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    p#about-me {
+      font-size: 1.5em;
+  }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+    p#about-me {
+      font-size: 1.5em;
     }
 }
 
-@media screen and (min-width: 350px) {
-    img#headshot {
-        height: auto;
-        width: auto;
-        max-width: 8.5em;
-        max-height: 8.5em;
-    }
+/* desktop */
+@media screen and (min-width: 1684px) {
+  div.welcome-container {
+    margin-top: 6%;
+  }
 }

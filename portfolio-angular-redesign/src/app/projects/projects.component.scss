@@ -3,18 +3,25 @@
 }
 
 .container {
-  max-width: 100%;
-  margin-top: 10%;
+  background: url(/assets/images/projects_mobile_3x.png) no-repeat;
+  background-size: 100%;
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+.projects-container {
   text-align: center;
 }
 
 .inner-container {
-  border: .4px rgba(181, 181, 181, 0.3) solid;
+  border: .4px rgba(181, 181, 181, .3) solid;
   border-radius: 5px;
-  background-color: rgba(0, 157, 126, 0.75);
   box-shadow: 0 0 10px gray;
   padding-top: 5%;
   padding-bottom: 5%;
+  margin-top: 25%;
 }
 
 .image-resize {
@@ -22,6 +29,9 @@
   width: 280px;
   object-fit: cover;
   object-position: center center;
+  border: .4px rgba(181, 181, 181, .3) solid;
+  border-radius: 5px;
+  box-shadow: 0 0 10px gray;
 }
 
 img.hover-shadow {
@@ -35,6 +45,7 @@ img.hover-shadow {
 
 .projects-header {
   color: #fff;
+  padding-top: 30%;
 }
 
 .thumb-detail{
@@ -44,36 +55,84 @@ img.hover-shadow {
 
 .project-lift-history-header {
   color: #fff;
-  margin-bottom: 2%;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
 
 .project-hp-header {
-  color: #fff;
+  color: #35C8FF;
   margin-bottom: 2%;
   margin-top: 3%;
 }
 
 .video-description {
-  color: #fff;
+  color: #000;
   font-size: 1.25em;
   margin-right: 15%;
   margin-left: 15%;
 }
 
-@media screen and (min-width: 740px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  .container {
+    min-width: 100%;
+  }
+  .projects-header {
+    padding-top: 10%;
+    font-size: 3em;
+  }
+  .image-resize {
+    height: 350px;
+    width: 70%;
+    margin-bottom: 5%;
+  }
+  h3.project-lift-history-header {
+    font-size: 2.5em;
+  }
+  h3.project-hp-header {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (min-width: 731px) and (orientation: landscape) {
+
   .image-resize {
     height: 200px;
     width: 150px;
     object-fit: cover;
     object-position: center center;
   }
+  .image-resize {
+    height: 350px;
+    width: 70%;
+    margin-bottom: 5%;
+  }
 }
 
-// For desktop view
-@media only screen and (min-width: 751px) {
-  .image-resize {
-    height: 280px;
-    width: 220px;
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .projects-header{
+    padding-top: 15%;
+    font-size: 3em;
   }
+  h3.project-lift-history-header {
+    font-size: 2.5em;
+  }
+  h3.project-hp-header {
+    font-size: 2.5em;
+  }
+  .inner-container {
+    margin-top: 0%;
+  }
+  .project-lift-history-header {
+    margin-top: 0%;
+    margin-bottom: 5%;
+  }
+}
 
+@media screen and (min-width: 1366px) and (orientation: landscape) {
+  .container {
+    background: unset;
+  }
+  .projects-header {
+    padding-top: 7%;
+  }
 }

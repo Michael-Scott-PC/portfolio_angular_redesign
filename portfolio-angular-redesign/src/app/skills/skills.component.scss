@@ -3,16 +3,16 @@
 }
 
 #skills-html-container {
-    //border: 1px black solid;
+    background: url(/assets/images/skills_mobile_3x.png) no-repeat;
+    background-size: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    
 }
 
 #skills-list-container {
-    border: .4px rbga(181, 181, 181, .3) solid;
+    border: .4px rgba(181, 181, 181, .3) solid;
     border-radius: 5px;
     box-shadow: 0 0 10px gray;
     display: grid;
@@ -20,23 +20,12 @@
     grid-template-rows: 15% 15% 15% 10% 10% 35%;
     height: 75%;
     margin: auto;
-    margin-top: 25%;
+    margin-top: 40%;
 }
 
 .skills-header {
-    //border: 1px green solid;
     margin: auto;
     margin-bottom: 0;
-}
-
-h3:after {
-    content: "";
-    position: absolute;
-    width: 9%;
-    height: 1px;
-    left: 46%;
-    border-bottom: 1px solid #fff;
-    margin-top: 30px;
 }
 
 ul {
@@ -49,14 +38,15 @@ ul {
 li {
     font-size: .85em;
     color: black;
+    list-style-type: none;
 }
 
 .first-list::before {
     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
     color: blue; /* Change the color */
     font-weight: bold; /* If you want it to be bold */
-    font-size: 1.25em; 
-    display: inline-block; /* Needed to add space between the bullet and the text */ 
+    font-size: 1.25em;
+    display: inline-block; /* Needed to add space between the bullet and the text */
     width: 1em; /* Also needed for space (tweak if needed) */
     margin-left: 1em; /* Also needed for space (tweak if needed) */
   }
@@ -65,38 +55,34 @@ li {
     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
     color: red; /* Change the color */
     font-weight: bold; /* If you want it to be bold */
-    font-size: 1.25em; 
-    display: inline-block; /* Needed to add space between the bullet and the text */ 
+    font-size: 1.25em;
+    display: inline-block; /* Needed to add space between the bullet and the text */
     width: 1em; /* Also needed for space (tweak if needed) */
     margin-left: 1em; /* Also needed for space (tweak if needed) */
 }
 
 .languages-header {
     color: #fff;
-    //border: 1px yellow solid;
-    margin: auto;
-    margin-bottom: 20px;
     font-size: 1em;
+    justify-self: center;
+    align-self: center;
 }
 
 .second-header {
-    color: #2DBA9A;
-    //border: 1px green solid;
+    color: #35C8FF;
     margin: auto;
     margin-bottom: 0;
     font-size: 1em;
 }
 
 .second-header-2 {
-    color: #2DBA9A;
-    //border: 1px green solid;
+    color: #35C8FF;
     margin: auto;
     margin-top: 0;
     font-size: 1em;
 }
 
 .first-list {
-    //border: 1px red solid;
     justify-self: left;
     margin-top: 0;
     margin-bottom: -25px;
@@ -104,53 +90,215 @@ li {
 }
 
 #second-ul {
-    //border: 1px yellow solid;
-    //margin-bottom: 85px;
     grid-template-rows: 17% 17% 17%;
 }
 
 .second-list {
-    //border: 1px red solid;
     justify-self: left;
-    //margin: auto;
 }
 
 h3 {
     font-size: 1.5em;
 }
 
-@media screen and (orientation:landscape) {
-    #skills-html-container {
-        height: unset !important;
-    }
-    #skills-list-container {
-        height: 80vh;
-        margin-top: 10%;
-        width: 80%;
-    }
-    #first-ul {
-        justify-content: space-evenly;
-    }
-    #second-ul {
-        justify-content: space-evenly;
-    }
-    /*h4 {
-        color: #014A01;
-    }*/
-    .languages-header {
-        color: #014A01;
-    }
+/*******************
+    MEDIA QUERIES
+*******************/
+@media screen and (min-width: 375px) and (min-height: 812px) {
+  #skills-list-container {
+    margin-top: 25%;
+  }
 }
 
-@media screen and (min-width: 750px) {
-    h3:after {
-        width: 4%;
-        left: 48%;
-    }
-    .second-header {
-        color: #014A01;
-    }
-    .second-header-2 {
-        color: #014A01;
-    }
+@media screen and (min-width: 411px) and (min-height: 823px) {
+  #skills-list-container {
+    margin-top: 33%;
+  }
+}
+
+@media screen and (min-width: 644px) and (min-height: 670px) {
+  #skills-html-container {
+    height: 120vh;
+  }
+  .second-header {
+    color: #FFFFFF;
+  }
+  .second-header-2 {
+    margin: unset;
+    color: #FFFFFF;
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-height: 1024px) {
+  #skills-html-container {
+    height: 115vh;
+  }
+  #skills-list-container {
+    margin-top: 45%;
+    width: 75%;
+  }
+  .skills-header {
+    margin: unset;
+    font-size: 2em;
+  }
+  .languages-header {
+    font-size: 1.5em;
+  }
+  h3 {
+    margin-bottom: 0;
+    align-self: center;
+    justify-self: center;
+  }
+  .first-list {
+    justify-self: center;
+  }
+  .second-header {
+    margin: unset;
+    justify-self: center;
+    align-self: self-end;
+    font-size: 1.5em;
+  }
+  .second-header-2 {
+    margin: unset;
+    justify-self: center;
+    font-size: 1.5em;
+  }
+  .second-list {
+    justify-self: center;
+  }
+  ul {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (min-width: 568px) and (orientation:landscape) {
+  #skills-html-container {
+    background: url(/assets/images/skills_mobile_3x.png) no-repeat;
+    background-size: 101%;
+    height: 225vh;
+  }
+  .second-header {
+    color: #FFFFFF;
+  }
+  .second-header-2 {
+    color: #FFFFFF;
+  }
+}
+
+@media screen and (min-width: 640px) and (orientation:landscape) {
+  #skills-html-container {
+    height: 100vh;
+    background: unset;
+  }
+  #skills-list-container {
+    margin-top: 9%;
+    width: 75%;
+    height: 95%;
+  }
+  .skills-header {
+    margin: unset;
+    justify-self: center;
+    align-self: self-end;
+  }
+  .second-header {
+    color: #35C8FF;
+    margin: unset;
+    justify-self: center;
+    align-self: self-end;
+  }
+  .second-header-2 {
+    color: #35C8FF;
+    margin: unset;
+    justify-self: center;
+  }
+  ul#first-ul {
+    justify-content: space-around;
+  }
+  ul#second-ul {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 731px) and (orientation:landscape) {
+  #skills-html-container {
+    height: 90vh;
+    background: unset;
+  }
+  #skills-list-container {
+    margin-top: 9%;
+    width: 75%;
+  }
+  .skills-header {
+    margin: unset;
+    justify-self: center;
+    align-self: self-end;
+  }
+  .second-header {
+    color: #35C8FF;
+    margin: unset;
+    justify-self: center;
+    align-self: self-end;
+  }
+  .second-header-2 {
+    color: #35C8FF;
+    margin: unset;
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 812px) and (orientation:landscape) {
+  #skills-list-container {
+    width: 75%;
+  }
+  .skills-header {
+    margin: unset;
+    justify-self: center;
+    align-self: self-end;
+  }
+  .languages-header {
+    margin: unset;
+    justify-self: center;
+  }
+  .second-header {
+    margin: unset;
+    justify-self: center;
+    align-self: self-end;
+  }
+  .second-header-2 {
+    margin: unset;
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 1024px) and (orientation:landscape) {
+  #skills-list-container {
+    margin-top: 7%;
+  }
+  .skills-header {
+    font-size: 3em;
+  }
+  .languages-header {
+    font-size: 2.5em;
+  }
+  .second-header {
+    color: #35C8FF;
+    font-size: 2.5em;
+  }
+  .second-header-2 {
+    color: #35C8FF;
+    font-size: 2.5em;
+  }
+  ul {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 768px) and (orientation:portrait) {
+  .second-header {
+    color: #35C8FF;
+  }
+  .second-header-2 {
+    color: #35C8FF;
+  }
 }

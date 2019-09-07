@@ -1,67 +1,86 @@
 footer {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto 30% auto;
-    background-color: #2DBA9A;
+    grid-template-rows: auto;
+    background-color: #35C8FF;
     align-content: center;
     height: 30vh;
     margin-top: 10%;
+    justify-content: center;
+}
+
+span {
+  margin-top: 10%;
 }
 
 .fa{
     color: #FFF;
-    width: 50%;
-    //border: 1px black solid;
 }
 
 .fa-github {
-    margin: auto;
     font-size: 1.2em;
 }
 
 .fa-instagram {
-    margin: auto;
-    margin-top: 0px;
     font-size: 1.2em;
-    align-items: center;
-    //border: 1px red solid;
 }
 
 .fa-envelope {
-    margin: auto;
-    margin-top: 0px;
     font-size: 1.2em;
-    //border: 1px red solid;
 }
+
 a {
+    font-size: 1em;
     margin-left: 5%;
-    //border: 1px green solid;
-
 }
 
-@media screen and (orientation:landscape) {
-    .fa-envelope {
-        margin-left: 30%;
-    }
-    .fa-github {
-        margin-left: 30%;
-    }
-    .fa-instagram {
-        margin-left: 30%;
-    }
+// iphone 5/SE landscape
+@media screen and (min-width: 370px) and (orientation:landscape) {
+  footer {
+    height: 40vh;
+    justify-content: center;
+  }
+  span {
+    width: 100%;
+  }
+  .fa {
+    padding: 1%;
+  }
 }
 
-@media screen and (min-width: 750px) {
-    footer {
-        font-size: 1.25em;
-    }
-    .fa-envelope {
-        margin-left: 40%;
-    }
-    .fa-github {
-        margin-left: 40%;
-    }
-    .fa-instagram {
-        margin-left: 40%;
-    }
+// iPad portrait
+@media only screen and (min-width: 760px) and (orientation:portrait) {
+  footer {
+    font-size: 1.5em;
+    justify-content: center;
+  }
+  .fa {
+    width: 100%;
+  }
+}
+
+// iPad Pro portrait
+@media only screen and (min-width: 1020px) and (orientation:portrait) {
+  .fa {
+    font-size: 1.5em;
+  }
+}
+
+/* iPad Landscape */
+@media screen and (min-width: 1024px) and (orientation:landscape) {
+  footer {
+    font-size: 1.25em;
+    justify-content: center;
+    height: 45vh;
+  }
+  .fa {
+    width: 100%;
+  }
+}
+
+// iPad Pro Landscape
+@media only screen and (min-width: 1366px) and (orientation:landscape) {
+  footer {
+    font-size: 1.75em;
+  }
 }
